@@ -1,0 +1,303 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.hero {
+  display: grid;
+}
+
+.hero img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+
+.hero__text {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  align-self: end;
+  background-color: #2a3d8c;
+  padding: 16px;
+  opacity: 0.8;
+}
+
+.hero__text h2 {
+  color: white;
+  font-size: 20px;
+  border-bottom: 2px solid white;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.hero__text p {
+  display: none;
+}
+
+.homeGrid {
+  padding: 0 20px;
+}
+
+.homeGrid h1 {
+  display: none;
+}
+
+ul {
+  padding: 40px 30px 60px 20px;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+.homeGrid__grid h2 {
+  margin-bottom: 30px;
+}
+
+.homeGrid__categories {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.homeGrid__categories a {
+  text-decoration: none;
+}
+
+.homeGrid__category {
+  display: grid;
+  position: relative;
+}
+
+.homeGrid__category h3 {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  z-index: 1;
+  text-align: center;
+  align-self: end;
+  padding: 0 12px 12px;
+  color: white;
+}
+
+.homeGrid__category img {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.homeGrid__category-overlay {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.homeGrid__usa {
+  margin: 90px 0;
+  display: grid;
+  place-items: center;
+}
+
+.homeGrid__usa img {
+  width: 70%;
+}
+
+.homeGrid__boards {
+  margin-bottom: 60px;
+}
+
+.homeGrid__boards img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.homeGrid__boards h2 {
+  margin-top: 12px;
+  text-align: center;
+  font-size: 20px;
+}
+
+.homeGrid__testimonials {
+  margin-bottom: 60px;
+}
+
+.homeGrid__testimonials h2 {
+  margin-bottom: 20px;
+}
+
+.homeGrid__testimonials p:last-of-type {
+  font-weight: bold;
+  font-size: 14px;
+  margin-top: 12px;
+  text-align: end;
+}
+
+.homeGrid__contact {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .hero img {
+    height: 400px;
+  }
+
+  .hero__text {
+    height: 120px;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero__text p {
+    display: block;
+    color: white;
+  }
+
+  .homeGrid {
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 30px;
+  }
+
+  ul {
+    grid-column: 2/3;
+    grid-row: 1;
+    padding: 0;
+  }
+
+  ul h1 {
+    margin-bottom: 20px;
+  }
+
+  ul li {
+    list-style-position: inside;
+  }
+
+  .homeGrid h1 {
+    display: block;
+  }
+
+  .homeGrid__grid {
+    display: none;
+  }
+
+  .homeGrid__boards {
+    grid-column: 3/4;
+    grid-row: 1;
+    margin: 0;
+  }
+
+  .homeGrid__usa {
+    grid-column: 3/4;
+    grid-row: 2;
+    margin: 0;
+  }
+
+  .homeGrid__testimonials {
+    grid-column: 2/3;
+    grid-row: 2;
+    margin: 0;
+  }
+
+  .homeGrid__contact {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-row: 1/3;
+
+    background-color: #2a3d8c;
+    color: white;
+    padding: 20px;
+  }
+
+  .homeGrid__contact a {
+    color: white;
+    font-size: 14px;
+  }
+
+  .homeGrid__contact a span {
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .contact__container {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .contact__container section {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 20px;
+    row-gap: 4px;
+  }
+
+  .contact__container h3 {
+    font-size: 18px;
+    margin-bottom: 4px;
+  }
+
+  .contact__container img {
+    grid-column: 1/2;
+    grid-row: 1/4;
+    width: 40px;
+    align-self: center;
+  }
+
+  .contact__container p {
+    font-size: 14px;
+  }
+
+  .homeGrid__usa img {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .homeGrid {
+    gap: 40px;
+    grid-template-columns: auto 1fr 1fr;
+  }
+
+  .contact__container {
+    gap: 40px;
+  }
+}
+
+@media screen and (min-width: 1260px) {
+  .homeGrid {
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 0 0;
+  }
+
+  .homeGrid__usa img {
+    width: 80%;
+    max-width: 280px;
+  }
+}

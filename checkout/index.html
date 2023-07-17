@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./index.css" />
+    <title>Shipping & Checkout | VeeBoard</title>
+  </head>
+  <body>
+    <header>
+      <div class="header__wrapper">
+        <img src="/assets/veeboard.jpg" alt="VeeBoards Logo" />
+      </div>
+    </header>
+
+    <main class="checkout">
+      <h1>Checkout</h1>
+
+      <form action="">
+        <section class="checkout__shipping">
+          <h2>Shipping Information</h2>
+
+          <fieldset class="checkout__user">
+            <label for="fullName">Full Name</label>
+            <input
+              id="fullName"
+              name="fullName"
+              type="text"
+              placeholder="Jhon Doe"
+            />
+
+            <label for="phoneNumber">Phone Number</label>
+            <input
+              id="phoneNumber"
+              name="phoneNumber"
+              type="tel"
+              placeholder="208-982-3746"
+            />
+
+            <label for="email">Email</label>
+            <input id="email" name="email" type="text" placeholder="Jhon Doe" />
+          </fieldset>
+
+          <fieldset class="checkout__address">
+            <label for="addressOne">Address Line 1</label>
+            <input
+              id="addressOne"
+              name="addressOne"
+              type="text"
+              placeholder="123 Main Street"
+            />
+
+            <label for="addressTwo">Address Line 2</label>
+            <input
+              id="addressTwo"
+              name="addressTwo"
+              type="text"
+              placeholder="Apt 208"
+            />
+
+            <label for="city">City</label>
+            <input id="city" name="city" type="text" placeholder="Provo" />
+
+            <label for="state">State</label>
+            <input id="state" name="state" type="text" placeholder="Utah" />
+
+            <label for="zipCode">Zip Code</label>
+            <input
+              id="zipCode"
+              name="zipCode"
+              type="text"
+              placeholder="83092"
+            />
+          </fieldset>
+        </section>
+
+        <section class="checkout__payment">
+          <h2>Payment Information</h2>
+
+          <fieldset class="checkout__card">
+            <label for="cardName">Cardholder Name</label>
+            <input
+              id="cardName"
+              name="cardName"
+              type="text"
+              placeholder="John Doe"
+            />
+
+            <label for="cardNumber">Card Number</label>
+            <input
+              id="cardNumber"
+              name="cardNumber"
+              type="tel"
+              inputmode="numeric"
+              pattern="[0-9\s]{13,19}"
+              autocomplete="cc-number"
+              maxlength="19"
+              placeholder="XXXX XXXX XXXX XXXX"
+            />
+
+            <div class="checkout__cardDate">
+              <label for="cardNumber">Expiration Date</label>
+
+              <select id="cardExpirationMonth">
+                <option></option>
+                <option>01</option>
+                <option>02</option>
+                <option>03</option>
+                <option>04</option>
+                <option>05</option>
+                <option>06</option>
+                <option>07</option>
+                <option>08</option>
+                <option>09</option>
+                <option>10</option>
+                <option>11</option>
+                <option>12</option>
+              </select>
+
+              <select id="cardExpirationYear">
+                <option></option>
+                <option>2016</option>
+                <option>2017</option>
+                <option>2018</option>
+                <option>2019</option>
+                <option>2020</option>
+                <option>2021</option>
+                <option>2022</option>
+                <option>2023</option>
+                <option>2024</option>
+                <option>2025</option>
+              </select>
+            </div>
+
+            <label for="cardCcv">CCV</label>
+            <input
+              id="cardCcv"
+              name="cardCcv"
+              placeholder="XXX"
+              maxlength="4"
+              autocomplete="off"
+              type="text"
+            />
+          </fieldset>
+        </section>
+
+        <div class="checkout__amount">
+          <div class="checkout__subtotal">
+            <p>Subtotal:</p>
+            <span>$100.00</span>
+          </div>
+
+          <div class="checkout__taxes">
+            <p>Taxes:</p>
+            <span>$10.00</span>
+          </div>
+
+          <div class="checkout__total">
+            <p>Total:</p>
+            <span>$200.00</span>
+          </div>
+        </div>
+
+        <button class="btnSubmit">Submit Order</button>
+      </form>
+    </main>
+  </body>
+</html>

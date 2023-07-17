@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  height: 100svh;
+  display: grid;
+  grid-template-rows: 92px 1fr 110px;
+  overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.confirmation {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.confirmation img {
+  width: 200px;
+}
+
+.confirmation a {
+  margin-top: 60px;
+  text-decoration: none;
+  color: white;
+  background-color: #2a3d8c;
+  padding: 16px 30px;
+  border-radius: 4px;
+}
+
+@media screen and (min-width: 768px) {
+  #footer {
+    margin-top: 0;
+  }
+}

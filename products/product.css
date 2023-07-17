@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.product__wrapper {
+  padding: 30px 20px;
+  display: grid;
+  gap: 20px;
+}
+
+.product__wrapper h1 {
+  font-size: 36px;
+}
+
+.product__description {
+  margin-top: -10px;
+  font-size: 20px;
+}
+
+.product__wrapper img {
+  width: 100%;
+}
+
+.product__price {
+  margin-top: 30px;
+}
+
+.product__quantity {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 50px;
+  padding: 6px 12px;
+  width: 160px;
+}
+
+.product__quantity img {
+  width: 25px;
+  filter: invert(1);
+}
+
+.product__color {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.product__colors label {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  border-radius: 50%;
+}
+
+/* .product__colors input {
+  display: none;
+}
+
+.product__colors input:checked.product__colors label {
+  box-shadow: 0 0 0 3px #f4f4f4, 0 0 0 6px #006039;
+} */
+
+/* input[type='radio']:checked {
+  border: 1px solid black;
+} */
+
+.product__add {
+  padding: 12px;
+  background-color: #2a3d8c;
+  color: white;
+  font-size: 16px;
+  text-align: center;
+  border-radius: 4px;
+  margin-top: 30px;
+  border: 2px solid transparent;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 92px 1fr 100px;
+  }
+
+  .product__wrapper {
+    padding: 30px;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .product__wrapper img {
+    grid-column: 2;
+    grid-row: 1/7;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .product__add {
+    width: 300px;
+    cursor: pointer;
+  }
+
+  .product__add:hover {
+    border: 2px solid #2a3d8c;
+    background-color: white;
+    color: black;
+  }
+
+  #footer {
+    margin-top: 0;
+  }
+}
+
+@media screen and (min-width: 1260px) {
+  .product__wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 0;
+  }
+}
